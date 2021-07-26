@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NavigationExtras, Router} from "@angular/router";
+import { NavigationExtras, Router } from "@angular/router";
 
 interface Region {
   id: number;
