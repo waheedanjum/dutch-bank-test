@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {RegionService} from "../../services/region.service";
-import {Observable} from "rxjs";
-import {CountriesData} from "../../models/region";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
+import { RegionService } from "../../services/region.service";
+import { Observable } from "rxjs";
+import { CountriesData } from "../../models/region";
 
 @Component({
   selector: 'app-country-details',
