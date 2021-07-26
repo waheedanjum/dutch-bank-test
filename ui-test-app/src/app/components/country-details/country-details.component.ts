@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {RegionService} from "../../services/region.service";
 import {Observable} from "rxjs";
@@ -17,18 +17,18 @@ export class CountryDetailsComponent implements OnInit {
   countries$: Observable<CountriesData[]> | undefined;
 
   constructor(private activatedRoute: ActivatedRoute, private regionService: RegionService) {
-   let value = this.activatedRoute.snapshot.queryParamMap.get('myRegion');
+    let value = this.activatedRoute.snapshot.queryParamMap.get('myRegion');
 
-   if(value) {
-     this.name = JSON.parse(value);
-   }
+    if (value) {
+      this.name = JSON.parse(value);
+    }
   }
 
   ngOnInit(): void {
-    if(this.name && this.name.toUpperCase() === 'ASIA') {
+    if (this.name && this.name.toUpperCase() === 'ASIA') {
       this.countries$ = this.regionService.getAsianCountries();
     }
-    if(this.name && this.name.toUpperCase() === 'EUROPE') {
+    if (this.name && this.name.toUpperCase() === 'EUROPE') {
       this.countries$ = this.regionService.getEuropeanCountries();
     }
   }
