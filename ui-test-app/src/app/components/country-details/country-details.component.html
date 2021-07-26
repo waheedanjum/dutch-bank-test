@@ -1,0 +1,6 @@
+<h2>Countries</h2>
+<nav class="navigation">
+  <ul *ngFor="let c of countries$ | async">
+    <li>{{c.name}}</li>
+  </ul>
+</nav>
